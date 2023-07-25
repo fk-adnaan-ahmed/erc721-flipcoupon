@@ -7,7 +7,7 @@ contract FlipCoupon is ERC721Base {
 
     mapping(uint => string) internal couponMapping;
 
-    constructor(address _royaltyRecipient, uint128 _royaltyBps) ERC721Base("FlipCoupon2", "FKCPN2", _royaltyRecipient, _royaltyBps){}
+    constructor(address _royaltyRecipient, uint128 _royaltyBps) ERC721Base("FlipCoupon", "FKCPN", _royaltyRecipient, _royaltyBps){}
 
     function setCouponCode(uint tokenId, string memory coupon) public {
         require(msg.sender == owner(), 'coupon code can only be set by owner');
